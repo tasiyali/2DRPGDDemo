@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://la7533qclmos"]
+
+[ext_resource type="Script" uid="uid://66t5htuld4d4" path="res://Sprites/Npc/NpcSimple.cs" id="1_24mw2"]
+[ext_resource type="Texture2D" uid="uid://l58lkiu042xv" path="res://Texture/Actor/Characters/Shadow.png" id="1_286rf"]
+[ext_resource type="Texture2D" uid="uid://cql0xtshuj13x" path="res://Texture/Actor/Characters/Caveman/SpriteSheet.png" id="2_24mw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ulst"]
+atlas = ExtResource("2_24mw2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsk5b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ulst")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8eqs"]
+size = Vector2(14, 14)
+
+[node name="NpcSimple" type="Area2D" unique_id=1061389209 node_paths=PackedStringArray("Sprite2D", "NavigationAgent", "timer")]
+texture_filter = 1
+script = ExtResource("1_24mw2")
+Sprite2D = NodePath("AnimatedSprite2D")
+NavigationAgent = NodePath("NavigationAgent2D")
+timer = NodePath("Timer")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=891801565]
+self_modulate = Color(1, 1, 1, 0.19607843)
+scale = Vector2(1.5, 1.4)
+texture = ExtResource("1_286rf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=639952754]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_wsk5b")
+animation = &"idle"
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1606542385]
+path_desired_distance = 2.0
+target_desired_distance = 2.0
+path_postprocessing = 1
+debug_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1118055862]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_h8eqs")
+
+[node name="Timer" type="Timer" parent="." unique_id=559897923]
+one_shot = true
+
+[connection signal="input_event" from="." to="." method="OnInputEvent"]
+[connection signal="timeout" from="Timer" to="." method="OnTimerout"]

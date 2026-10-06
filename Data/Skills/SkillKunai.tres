@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://b20cdj1gfeubk"]
+
+[ext_resource type="Texture2D" uid="uid://ct4ipm7qta4kp" path="res://Texture/Ui/Skill Icon/Items & Weapon/Kunai.png" id="1_rapc1"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_wuxr8"]
+[ext_resource type="PackedScene" uid="uid://celgknhslxbxe" path="res://Scenes/Effects/skill_kunai.tscn" id="3_wuxr8"]
+
+[resource]
+script = ExtResource("2_wuxr8")
+manaCost = 1.5
+baseDamage = 2.5
+skillEffectScene = ExtResource("3_wuxr8")
+itemIron = ExtResource("1_rapc1")
+itemName = "小刀"
+itemDescription = "投掷小刀"
+itemPrice = 45
+type = 4
+itemId = "Kunal"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

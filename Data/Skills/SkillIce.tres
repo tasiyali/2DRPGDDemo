@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cdhj7itjx2mmc"]
+
+[ext_resource type="Texture2D" uid="uid://c8l4airnvei6x" path="res://Texture/Ui/Skill Icon/Meteo/Snow.png" id="1_mb08w"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_1qryt"]
+[ext_resource type="PackedScene" uid="uid://b1luurqv4s0u6" path="res://Scenes/Effects/skill_ice.tscn" id="3_1qryt"]
+
+[resource]
+script = ExtResource("2_1qryt")
+manaCost = 1.0
+baseDamage = 1.8
+skillEffectScene = ExtResource("3_1qryt")
+itemIron = ExtResource("1_mb08w")
+itemName = "冰爆"
+itemDescription = "发射冰魔法"
+itemPrice = 30
+itemId = "Ice"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

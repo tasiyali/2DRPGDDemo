@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://3l8dbdbaendk"]
+
+[ext_resource type="Texture2D" uid="uid://bfkuve6332x8n" path="res://Texture/Equipment/placeholder_ring.png" id="1_jn31j"]
+[ext_resource type="Script" uid="uid://da4lcg2njv6xn" path="res://Data/EquipData.cs" id="1_mrr15"]
+
+[resource]
+script = ExtResource("1_mrr15")
+equipType = 4
+itemIron = ExtResource("1_jn31j")
+itemName = "铁戒指"
+itemPrice = 500
+type = 3
+canDrop = true
+maxStack = 1
+itemId = "Equipment"
+metadata/_custom_type_script = "uid://da4lcg2njv6xn"

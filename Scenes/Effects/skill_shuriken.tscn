@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://lq1q5gjbak"]
+
+[ext_resource type="PackedScene" uid="uid://celgknhslxbxe" path="res://Scenes/Effects/skill_kunai.tscn" id="1_1kult"]
+[ext_resource type="Texture2D" uid="uid://bqdlx51hbnvlc" path="res://Texture/FX/Projectile/Shuriken/SpriteSheet.png" id="2_nwu31"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppqoj"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(0, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7io4"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(69, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp4yn"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(138, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4gsy"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(207, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1gcs"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(276, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgeu8"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(345, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdd7y"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(414, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6virn"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(483, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fuvp"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(552, 0, 69, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la3vq"]
+atlas = ExtResource("2_nwu31")
+region = Rect2(621, 0, 69, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhjs8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppqoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7io4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp4yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4gsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1gcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgeu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdd7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6virn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fuvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la3vq")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="SkillShuriken" unique_id=153752118 instance=ExtResource("1_1kult")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=200433026]
+sprite_frames = SubResource("SpriteFrames_jhjs8")

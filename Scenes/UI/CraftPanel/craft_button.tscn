@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dflngrc2pqq87"]
+
+[ext_resource type="Script" uid="uid://dvulhc1dv5oue" path="res://Sprites/UI/CraftPanel/CraftButton.cs" id="1_u6uqt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrot7"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6uqt"]
+bg_color = Color(0.1327905, 0.14097205, 0.18199366, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh425"]
+bg_color = Color(0.36481315, 0.3816172, 0.46476185, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="CraftButton" type="Button" unique_id=1725572561 node_paths=PackedStringArray("ItemIcon")]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+theme_override_styles/normal = SubResource("StyleBoxFlat_yrot7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u6uqt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gh425")
+script = ExtResource("1_u6uqt")
+ItemIcon = NodePath("ItemIcon")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1985061327]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

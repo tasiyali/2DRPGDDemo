@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dkx686c1ccoht"]
+
+[ext_resource type="Script" uid="uid://ldn4purj4lsn" path="res://Autoloads/Transition.cs" id="1_h3pgc"]
+[ext_resource type="Shader" uid="uid://bp8aee7078t22" path="res://Resources/transition.gdshader" id="2_2e8nc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wsk5b"]
+shader = ExtResource("2_2e8nc")
+shader_parameter/progress = 0.0
+shader_parameter/diamondPixelSize = 10.0
+
+[node name="Transition" type="Node2D" unique_id=1084199882 node_paths=PackedStringArray("ColorRect")]
+script = ExtResource("1_h3pgc")
+ColorRect = NodePath("CanvasLayer/ColorRect")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=803102179]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1224542620]
+material = SubResource("ShaderMaterial_wsk5b")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.15199637, 0.15199634, 0.15199634, 1)

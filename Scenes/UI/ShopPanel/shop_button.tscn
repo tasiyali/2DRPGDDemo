@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://biv18xdcmigxl"]
+
+[ext_resource type="Script" uid="uid://cgkb7c6x0rs33" path="res://Sprites/UI/ShopPanel/ShopButton.cs" id="1_5528g"]
+[ext_resource type="Texture2D" uid="uid://bf3kx0rce6k0x" path="res://Texture/Equipment/placeholder_helmet.png" id="2_v4qpd"]
+[ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://Texture/Items/Treasure/GoldCoin.png" id="3_xcp6n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ajo0"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trn82"]
+bg_color = Color(0.096678264, 0.10331472, 0.1366134, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bwei"]
+bg_color = Color(0.38253248, 0.39979023, 0.48499805, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="ShopButton" type="Button" unique_id=1736739805 node_paths=PackedStringArray("ItemIcon", "Price")]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ajo0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_trn82")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5bwei")
+script = ExtResource("1_5528g")
+ItemIcon = NodePath("ItemIcon")
+Price = NodePath("HBoxContainer/Price")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1188027584]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -32.0
+offset_right = 21.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v4qpd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=821127552]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=615921220]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = ExtResource("3_xcp6n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Price" type="Label" parent="HBoxContainer" unique_id=2122866841]
+layout_mode = 2
+text = "10"
+
+[connection signal="pressed" from="." to="." method="OnPressed"]

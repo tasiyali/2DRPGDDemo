@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://crbt1j0vt8b81"]
+
+[ext_resource type="Texture2D" uid="uid://bltswclxeltyo" path="res://Texture/Plus.png" id="1_5yalj"]
+[ext_resource type="Script" uid="uid://mrq5kvxcam7j" path="res://Sprites/UI/StatsPanel/StatsPanel.cs" id="1_f5jt8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr48g"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsk5b"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_jxx2r"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_pm7kv"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_h8eqs"]
+font_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rwe4"]
+bg_color = Color(0.23529412, 0.78431374, 0.2901961, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cw0"]
+bg_color = Color(0.17042357, 0.5432946, 0.2034992, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obwc3"]
+bg_color = Color(0.2575698, 0.90094197, 0.32662752, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="StatsPanel" type="PanelContainer" unique_id=1778504997 node_paths=PackedStringArray("DamageLabel", "HPLabel", "VelLabel", "ManaLabel", "CritLabel", "CritDMGLabel", "CurrentLevelLabel", "CurrentPointsLabel", "STRPointsLabel", "DEXPointsLabel", "INTPointsLabel")]
+custom_minimum_size = Vector2(215, 0)
+offset_right = 215.0
+offset_bottom = 332.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xr48g")
+script = ExtResource("1_f5jt8")
+DamageLabel = NodePath("MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/DamageLabel")
+HPLabel = NodePath("MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/HPLabel")
+VelLabel = NodePath("MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/VelLabel")
+ManaLabel = NodePath("MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/ManaLabel")
+CritLabel = NodePath("MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/CritLabel")
+CritDMGLabel = NodePath("MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/CritDMGLabel")
+CurrentLevelLabel = NodePath("MarginContainer/VBoxContainer/CurrentLevelLabel")
+CurrentPointsLabel = NodePath("MarginContainer/VBoxContainer/CurrentPointsLabel")
+STRPointsLabel = NodePath("MarginContainer/VBoxContainer/Attributes/HBoxContainer/STRPointsLabel")
+DEXPointsLabel = NodePath("MarginContainer/VBoxContainer/Attributes/HBoxContainer2/DEXPointsLabel")
+INTPointsLabel = NodePath("MarginContainer/VBoxContainer/Attributes/HBoxContainer3/INTPointsLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1060768480]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=801994857]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=348826426]
+layout_mode = 2
+text = "状态"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=580176922]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.22478837, 0.24590617, 0.30391583, 1)
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1721873565]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=501677671]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1393277809]
+layout_mode = 2
+alignment = 1
+
+[node name="DamageLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1974262836]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "伤害：20"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="HPLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=178088472]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "生命值：20"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=375855307]
+layout_mode = 2
+alignment = 1
+
+[node name="VelLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=780565216]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "速度：20"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="ManaLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1175123803]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "魔力值：20"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1284604971]
+layout_mode = 2
+alignment = 1
+
+[node name="CritLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1083546622]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "暴击：20"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="CritDMGLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" unique_id=468354433]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "暴击伤害：20"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1587591169]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.22478837, 0.24590617, 0.30391583, 1)
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=2036415054]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="CurrentLevelLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1213810479]
+layout_mode = 2
+text = "等级1"
+label_settings = SubResource("LabelSettings_jxx2r")
+horizontal_alignment = 1
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1319644963]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+
+[node name="CurrentPointsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1002404509]
+layout_mode = 2
+text = "技能点数：0"
+label_settings = SubResource("LabelSettings_pm7kv")
+
+[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer" unique_id=666937186]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+
+[node name="Attributes" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=441489077]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Attributes" unique_id=1127506387]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer" unique_id=781486103]
+layout_mode = 2
+text = "力量"
+label_settings = SubResource("LabelSettings_h8eqs")
+
+[node name="STRPointsLabel" type="Label" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer" unique_id=556264499]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+label_settings = SubResource("LabelSettings_h8eqs")
+
+[node name="STRButton" type="Button" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer" unique_id=765898065]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5rwe4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cw0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_obwc3")
+icon = ExtResource("1_5yalj")
+icon_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Attributes" unique_id=2063718623]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer2" unique_id=546578394]
+layout_mode = 2
+text = "敏捷"
+label_settings = SubResource("LabelSettings_h8eqs")
+
+[node name="DEXPointsLabel" type="Label" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer2" unique_id=1654105154]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+label_settings = SubResource("LabelSettings_h8eqs")
+
+[node name="DEXButton" type="Button" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer2" unique_id=649304443]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5rwe4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cw0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_obwc3")
+icon = ExtResource("1_5yalj")
+icon_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Attributes" unique_id=1678653793]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer3" unique_id=636284596]
+layout_mode = 2
+text = "智力"
+label_settings = SubResource("LabelSettings_h8eqs")
+
+[node name="INTPointsLabel" type="Label" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer3" unique_id=1069191324]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+label_settings = SubResource("LabelSettings_h8eqs")
+
+[node name="INTButton" type="Button" parent="MarginContainer/VBoxContainer/Attributes/HBoxContainer3" unique_id=807388018]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5rwe4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cw0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_obwc3")
+icon = ExtResource("1_5yalj")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/HBoxContainer/STRButton" to="." method="OnStrButtonPressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/HBoxContainer2/DEXButton" to="." method="OnDexButtonPressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Attributes/HBoxContainer3/INTButton" to="." method="OnIntButtonPressed"]

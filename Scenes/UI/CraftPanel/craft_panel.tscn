@@ -1,0 +1,436 @@
+[gd_scene format=3 uid="uid://cao2axg5oao8"]
+
+[ext_resource type="Script" uid="uid://diela260krarr" path="res://Sprites/UI/CraftPanel/CraftPanel.cs" id="1_mwsys"]
+[ext_resource type="Resource" uid="uid://2jfy11leqh4r" path="res://Data/Crafting/CraftRing.tres" id="2_jxqct"]
+[ext_resource type="PackedScene" uid="uid://dflngrc2pqq87" path="res://Scenes/UI/CraftPanel/craft_button.tscn" id="2_kjoiy"]
+[ext_resource type="Texture2D" uid="uid://bfkuve6332x8n" path="res://Texture/Equipment/placeholder_ring.png" id="3_a6766"]
+[ext_resource type="Texture2D" uid="uid://brbowyharou0c" path="res://Texture/Items/Potion/LifePot.png" id="4_o4es6"]
+[ext_resource type="Texture2D" uid="uid://cav6bn6nfxs0l" path="res://Texture/Items/Potion/WaterPot.png" id="5_ianya"]
+[ext_resource type="Texture2D" uid="uid://d106bpe85jeci" path="res://Texture/Minus.png" id="6_jxqct"]
+[ext_resource type="Texture2D" uid="uid://bltswclxeltyo" path="res://Texture/Plus.png" id="7_4u2xw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwsys"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kjoiy"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsk5b"]
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbyyu"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cknvu"]
+bg_color = Color(0.14373162, 0.15237626, 0.19570905, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thn5t"]
+bg_color = Color(0.3618761, 0.3786009, 0.4613803, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0mpc"]
+bg_color = Color(0.14373162, 0.15237626, 0.19570905, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkele"]
+bg_color = Color(0.3618761, 0.3786009, 0.4613803, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hlo77"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dcxs"]
+bg_color = Color(0.14373162, 0.15237626, 0.19570905, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf8ar"]
+bg_color = Color(0.3327644, 0.3486331, 0.4274082, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxqct"]
+bg_color = Color(0.9999998, 0.35701737, 0.06309938, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38810843, 0.12798423, 0.015198343, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u2xw"]
+bg_color = Color(0.38444173, 0.109396406, 5.1018596e-06, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38810843, 0.12798423, 0.015198343, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pwcb"]
+bg_color = Color(1, 0.607521, 0.47460306, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38810843, 0.12798423, 0.015198343, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="CraftPanel" type="Control" unique_id=1079790581 node_paths=PackedStringArray("Container", "VBoxContainer", "ItemIcon", "ItemName", "Material1Icon", "Material1Name", "Material1Qty", "Material2Icon", "Material2Name", "Material2Qty", "AmountLabel")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mwsys")
+craftRecipes = Array[Object]([ExtResource("2_jxqct")])
+Container = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer")
+VBoxContainer = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer")
+ItemIcon = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/ItemIcon")
+ItemName = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/ItemName")
+Material1Icon = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Material1Icon")
+Material1Name = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Material1Name")
+Material1Qty = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Material1Qty")
+Material2Icon = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Material2Icon")
+Material2Name = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Material1Name")
+Material2Qty = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Material2Qty")
+AmountLabel = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/AmountLabel")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=383506885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="Panel" type="Panel" parent="." unique_id=1749514776]
+custom_minimum_size = Vector2(650, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mwsys")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1387694517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1010227072]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1343253948]
+layout_mode = 2
+text = "制作"
+label_settings = SubResource("LabelSettings_kjoiy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=62901347]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=204284001]
+custom_minimum_size = Vector2(332, 0)
+layout_mode = 2
+columns = 4
+
+[node name="CraftButton" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1725572561 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton2" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=958089766 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton3" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1453690762 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton4" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1895020701 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton5" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=835600300 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton6" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1155559223 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton7" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=7043870 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton8" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=752116603 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton9" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=77954864 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton10" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=815252904 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton11" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=861315703 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton12" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1112173997 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton13" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=806207005 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton14" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=540491832 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton15" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1106778541 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="CraftButton16" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" unique_id=1985060132 instance=ExtResource("2_kjoiy")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=102740604]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=350288227]
+layout_mode = 2
+alignment = 1
+
+[node name="ItemIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=840994454]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_a6766")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemName" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1465697571]
+layout_mode = 2
+text = "戒指"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1054571]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1575446907]
+layout_mode = 2
+text = "材料："
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1540302642]
+layout_mode = 2
+
+[node name="Material1Icon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=80327162]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("4_o4es6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Material1Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1582582505]
+layout_mode = 2
+text = "生命药水"
+
+[node name="Material1Qty" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1038697424]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1/64"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=185844500]
+layout_mode = 2
+
+[node name="Material2Icon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1725989998]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("5_ianya")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Material2Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=221828381]
+layout_mode = 2
+text = "魔力药水"
+
+[node name="Material2Qty" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=242485125]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1/64"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1898218237]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1573007735]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1609872368]
+layout_mode = 2
+text = "数量："
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1153667942]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/separation = 8
+
+[node name="RemoveButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=873993942]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xbyyu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cknvu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_thn5t")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/RemoveButton" unique_id=2068818849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jxqct")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AmountLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1267190581]
+layout_mode = 2
+text = "1"
+
+[node name="PlusButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=2008438267]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xbyyu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0mpc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dkele")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/PlusButton" unique_id=800799281]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4u2xw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CraftButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1005687545]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_hlo77")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0dcxs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pf8ar")
+text = "制作"
+
+[node name="CloseButton" type="Button" parent="." unique_id=1901286415]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 914.0
+offset_top = 75.0
+offset_right = 964.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_jxqct")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4u2xw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4pwcb")
+text = "X"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/RemoveButton" to="." method="OnRemoveButtonPressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/PlusButton" to="." method="OnPlusButtonPressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/CraftButton" to="." method="OnCraftButtonPressed"]
+[connection signal="pressed" from="CloseButton" to="." method="OnCloseButtonPressed"]

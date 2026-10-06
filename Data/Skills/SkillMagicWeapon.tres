@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://l6i6irbjtt1v"]
+
+[ext_resource type="Texture2D" uid="uid://de2d7ac1yxjun" path="res://Texture/Ui/Skill Icon/Spell/MagicWeapon.png" id="1_un6ch"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_uoqyi"]
+[ext_resource type="PackedScene" uid="uid://4oj7f2faphgx" path="res://Scenes/Effects/skill_magic_weapon.tscn" id="3_uoqyi"]
+
+[resource]
+script = ExtResource("2_uoqyi")
+manaCost = 2.0
+skillEffectScene = ExtResource("3_uoqyi")
+itemIron = ExtResource("1_un6ch")
+itemName = "魔法剑"
+itemDescription = "提高伤害"
+itemPrice = 50
+type = 4
+itemId = "MagicWeapon"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

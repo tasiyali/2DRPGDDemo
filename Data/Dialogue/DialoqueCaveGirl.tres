@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://wfghhbgtbwmw"]
+
+[ext_resource type="Texture2D" uid="uid://2dgnq2ivlth8" path="res://Texture/Actor/Characters/Cavegirl2/Faceset.png" id="1_nrouh"]
+[ext_resource type="Script" uid="uid://cknp228pchw3a" path="res://Data/Dialogue/DialogueData.cs" id="1_ooqyq"]
+
+[resource]
+script = ExtResource("1_ooqyq")
+npcName = "穴居女人"
+npcIcon = ExtResource("1_nrouh")
+dialogueLines = Array[String](["测试一", "测试二"])
+metadata/_custom_type_script = "uid://cknp228pchw3a"

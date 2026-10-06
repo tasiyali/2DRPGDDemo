@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://p4fvkj3ooxbt"]
+
+[ext_resource type="Script" uid="uid://r0y7t2vlbxpt" path="res://Autoloads/SoundManager.cs" id="1_u5vrn"]
+[ext_resource type="AudioStream" uid="uid://cs2queybqq206" path="res://Audio/Musics/1 - Adventure Begin.ogg" id="2_0x1ep"]
+
+[node name="SoundManager" type="Node" unique_id=1013220489 node_paths=PackedStringArray("streamPlayers")]
+script = ExtResource("1_u5vrn")
+streamPlayers = [NodePath("AudioStreamPlayer"), NodePath("AudioStreamPlayer2"), NodePath("AudioStreamPlayer3"), NodePath("AudioStreamPlayer4"), NodePath("AudioStreamPlayer5"), NodePath("AudioStreamPlayer6"), NodePath("AudioStreamPlayer7"), NodePath("AudioStreamPlayer8"), NodePath("AudioStreamPlayer9"), NodePath("AudioStreamPlayer10")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=947064762]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1001443533]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=361976204]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=1753977667]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="." unique_id=859877034]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="." unique_id=1099687145]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="." unique_id=1952367220]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="." unique_id=277695102]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="." unique_id=1542861679]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="." unique_id=1481965152]
+bus = &"SFX"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=884050490]
+stream = ExtResource("2_0x1ep")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true

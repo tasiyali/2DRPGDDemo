@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bvbwslnote556"]
+
+[ext_resource type="Script" uid="uid://cxbknh3xfxpvb" path="res://Sprites/Town/Portal.cs" id="1_gh2dj"]
+
+[node name="Portal" type="Area2D" unique_id=907420098]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_gh2dj")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

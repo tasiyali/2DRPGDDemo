@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ckcxuum6ysaep"]
+
+[ext_resource type="Texture2D" uid="uid://dclgu4xejljw6" path="res://Texture/Actor/Characters/Caveman/Faceset.png" id="1_4wfpd"]
+[ext_resource type="Script" uid="uid://cknp228pchw3a" path="res://Data/Dialogue/DialogueData.cs" id="1_en6hx"]
+
+[resource]
+script = ExtResource("1_en6hx")
+npcName = "穴居男人"
+npcIcon = ExtResource("1_4wfpd")
+dialogueLines = Array[String](["测试一", "测试二"])
+metadata/_custom_type_script = "uid://cknp228pchw3a"

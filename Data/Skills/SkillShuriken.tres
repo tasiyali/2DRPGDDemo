@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://2udtd58m661u"]
+
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="1_avw08"]
+[ext_resource type="Texture2D" uid="uid://qjsmi71b0p78" path="res://Texture/Ui/Skill Icon/Items & Weapon/Shuriken.png" id="1_yxtvc"]
+[ext_resource type="PackedScene" uid="uid://lq1q5gjbak" path="res://Scenes/Effects/skill_shuriken.tscn" id="3_um2ud"]
+
+[resource]
+script = ExtResource("1_avw08")
+manaCost = 2.0
+baseDamage = 3.0
+skillEffectScene = ExtResource("3_um2ud")
+itemIron = ExtResource("1_yxtvc")
+itemName = "手里剑"
+itemDescription = "投掷手里剑"
+itemPrice = 50
+type = 4
+itemId = "Shuriken"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

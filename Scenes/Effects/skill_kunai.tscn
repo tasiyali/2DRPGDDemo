@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://celgknhslxbxe"]
+
+[ext_resource type="Script" uid="uid://d1bq57674gs0p" path="res://Sprites/Effect/SkillEffect.cs" id="1_obhsw"]
+[ext_resource type="Texture2D" uid="uid://py8fn14ty6lq" path="res://Texture/FX/Projectile/Kunai/SpriteSheet.png" id="1_yxym6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obhsw"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(0, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07tln"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(65, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjtrx"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(130, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8mvg"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(195, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c55vd"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(260, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hbjb"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(325, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ggy"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(390, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxdr6"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(455, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x56vj"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(520, 0, 65, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0yms"]
+atlas = ExtResource("1_yxym6")
+region = Rect2(585, 0, 65, 59)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsk5b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obhsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07tln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjtrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8mvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c55vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hbjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0ggy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxdr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x56vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0yms")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="SkillKunai" type="Node2D" unique_id=153752118 node_paths=PackedStringArray("sprite2D")]
+texture_filter = 1
+script = ExtResource("1_obhsw")
+sprite2D = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=200433026]
+sprite_frames = SubResource("SpriteFrames_wsk5b")
+autoplay = "default"
+frame = 9
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="OnAnimationFinished"]

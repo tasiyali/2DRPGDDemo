@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b8xc0hbpn0eti"]
+
+[ext_resource type="Script" uid="uid://c7062ue257cj2" path="res://Sprites/UI/SkillPanel/EquippedSkillButton.cs" id="1_te81j"]
+[ext_resource type="Texture2D" uid="uid://bweydwh8hi2hw" path="res://Texture/Ui/Skill Icon/Meteo/Rain.png" id="2_w8qbg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w8qbg"]
+font_size = 18
+outline_size = 5
+outline_color = Color(6.180691e-05, 6.180692e-05, 6.180691e-05, 1)
+
+[node name="EquippedSkillButton" type="Button" unique_id=1601924271 node_paths=PackedStringArray("Panel", "SkillIcon", "Label")]
+texture_filter = 1
+custom_minimum_size = Vector2(50, 50)
+offset_right = 8.0
+offset_bottom = 8.0
+flat = true
+script = ExtResource("1_te81j")
+Panel = NodePath("Empty")
+SkillIcon = NodePath("SkillIron")
+Label = NodePath("Label")
+
+[node name="Empty" type="Panel" parent="." unique_id=450314508]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillIron" type="TextureRect" parent="." unique_id=1707496018]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_w8qbg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=965839882]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+label_settings = SubResource("LabelSettings_w8qbg")
+horizontal_alignment = 2
+
+[connection signal="pressed" from="." to="." method="OnPressed"]

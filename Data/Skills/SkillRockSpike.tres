@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://wuil0hplsfut"]
+
+[ext_resource type="Texture2D" uid="uid://dniqflihccv72" path="res://Texture/Ui/Skill Icon/Spell/RockSpike.png" id="1_hg8ko"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_i7j0e"]
+[ext_resource type="PackedScene" uid="uid://c62ptlwf4jh1c" path="res://Scenes/Effects/skill_rock_spike.tscn" id="3_i7j0e"]
+
+[resource]
+script = ExtResource("2_i7j0e")
+manaCost = 3.5
+baseDamage = 3.5
+skillEffectScene = ExtResource("3_i7j0e")
+itemIron = ExtResource("1_hg8ko")
+itemName = "岩石"
+itemDescription = "召唤岩石攻击"
+itemPrice = 70
+type = 4
+itemId = "RockSpilke"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

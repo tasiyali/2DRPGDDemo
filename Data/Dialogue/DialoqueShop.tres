@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://de0amk63qh7jb"]
+
+[ext_resource type="Script" uid="uid://cknp228pchw3a" path="res://Data/Dialogue/DialogueData.cs" id="1_eybcg"]
+[ext_resource type="Texture2D" uid="uid://dkdqf3xg6ba3l" path="res://Texture/Actor/Characters/Inspector/Faceset.png" id="1_sadlk"]
+
+[resource]
+script = ExtResource("1_eybcg")
+npcName = "商人"
+npcIcon = ExtResource("1_sadlk")
+dialogueLines = Array[String]([" 欢迎来到我的商店", "希望你能找到有用的东西"])
+metadata/_custom_type_script = "uid://cknp228pchw3a"

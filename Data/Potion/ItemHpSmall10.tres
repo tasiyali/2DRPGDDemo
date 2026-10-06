@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dcgtydbr2yy1j"]
+
+[ext_resource type="Texture2D" uid="uid://brbowyharou0c" path="res://Texture/Items/Potion/LifePot.png" id="1_wg2ab"]
+[ext_resource type="Script" uid="uid://7ktl0x5i8fun" path="res://Data/ItemData.cs" id="1_ygq8r"]
+
+[resource]
+script = ExtResource("1_ygq8r")
+itemIron = ExtResource("1_wg2ab")
+itemName = "小型生命恢复药水"
+itemDescription = "恢复10点生命值"
+itemPrice = 100
+value = 10.0
+type = 1
+canDrop = true
+isConsumable = true
+itemId = "HpPotion"
+metadata/_custom_type_script = "uid://7ktl0x5i8fun"

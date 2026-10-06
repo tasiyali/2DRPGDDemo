@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dtm56yc7htln8"]
+
+[ext_resource type="Texture2D" uid="uid://bjxem4vjr68t8" path="res://Texture/Ui/Skill Icon/Spell/OrbPlant.png" id="1_6cw28"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_qr2dk"]
+[ext_resource type="PackedScene" uid="uid://e8ujxo4j70uf" path="res://Scenes/Effects/skill_plant.tscn" id="3_qr2dk"]
+
+[resource]
+script = ExtResource("2_qr2dk")
+manaCost = 1.3
+baseDamage = 2.0
+skillEffectScene = ExtResource("3_qr2dk")
+itemIron = ExtResource("1_6cw28")
+itemName = "植物"
+itemDescription = "召唤植物攻击"
+itemPrice = 35
+type = 4
+itemId = "Plant"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

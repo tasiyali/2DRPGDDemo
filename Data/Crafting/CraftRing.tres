@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CraftData" format=3 uid="uid://2jfy11leqh4r"]
+
+[ext_resource type="Resource" uid="uid://3l8dbdbaendk" path="res://Data/Equipment/ItemEquipRing.tres" id="1_tyy0y"]
+[ext_resource type="Script" uid="uid://cqp6vmct2c6fm" path="res://Data/Crafting/CraftData.cs" id="1_vx2f7"]
+[ext_resource type="Resource" uid="uid://dcgtydbr2yy1j" path="res://Data/Potion/ItemHpSmall10.tres" id="2_5ow1x"]
+[ext_resource type="Script" uid="uid://2nn7wb03quvu" path="res://Data/Crafting/CraftMaterial.cs" id="3_sc1gh"]
+[ext_resource type="Resource" uid="uid://ngi3w5lfdtgh" path="res://Data/Potion/ItemManaSmall10.tres" id="4_olevm"]
+
+[sub_resource type="Resource" id="Resource_dbrtv"]
+script = ExtResource("3_sc1gh")
+item = ExtResource("2_5ow1x")
+amount = 1
+metadata/_custom_type_script = "uid://2nn7wb03quvu"
+
+[sub_resource type="Resource" id="Resource_baf1l"]
+script = ExtResource("3_sc1gh")
+item = ExtResource("4_olevm")
+amount = 1
+metadata/_custom_type_script = "uid://2nn7wb03quvu"
+
+[resource]
+script = ExtResource("1_vx2f7")
+craftItem = ExtResource("1_tyy0y")
+craftMaterial = Array[Object]([SubResource("Resource_dbrtv"), SubResource("Resource_baf1l")])
+metadata/_custom_type_script = "uid://cqp6vmct2c6fm"

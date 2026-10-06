@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dyb6iy0dhgy5b"]
+
+[ext_resource type="Texture2D" uid="uid://3wamnv2tv8ov" path="res://Texture/Ui/Dialog/DialogueBoxSimple.png" id="1_hf3bl"]
+[ext_resource type="Script" uid="uid://cx482kql2m0a" path="res://Sprites/UI/DialoguePanel/DialoguePanel.cs" id="1_yaxrh"]
+[ext_resource type="Texture2D" uid="uid://cuf6ewg7bgk8v" path="res://Texture/Actor/Characters/Boy/Faceset.png" id="2_yaxrh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsk5b"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="DialoguePanel" type="Control" unique_id=119795346 node_paths=PackedStringArray("NpcIcon", "Label")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yaxrh")
+NpcIcon = NodePath("Box/NpcIcon")
+Label = NodePath("Box/MarginContainer/Label")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2000216535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="Box" type="NinePatchRect" parent="." unique_id=1606847051]
+custom_minimum_size = Vector2(800, 160)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 108.0
+offset_right = 400.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hf3bl")
+patch_margin_left = 145
+patch_margin_top = 22
+patch_margin_right = 146
+patch_margin_bottom = 22
+
+[node name="NpcIcon" type="TextureRect" parent="Box" unique_id=53268853]
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 41.0
+offset_top = -91.0
+offset_right = 141.0
+offset_bottom = 9.0
+texture = ExtResource("2_yaxrh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Box" unique_id=860609700]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Label" type="Label" parent="Box/MarginContainer" unique_id=2085551674]
+layout_mode = 2
+size_flags_vertical = 1
+text = "测试"
+label_settings = SubResource("LabelSettings_wsk5b")
+autowrap_mode = 2

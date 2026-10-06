@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c37lwcl3dtxak"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsk5b"]
+font_size = 8
+
+[node name="DamageText" type="Label" unique_id=64744308]
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 10.0
+text = "10"
+label_settings = SubResource("LabelSettings_wsk5b")
+horizontal_alignment = 1
+vertical_alignment = 1

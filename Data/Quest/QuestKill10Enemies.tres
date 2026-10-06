@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://0tpc50etf1cc"]
+
+[ext_resource type="Resource" uid="uid://ck6sncrx81txb" path="res://Data/Equipment/ItemEquipBody.tres" id="1_rbnww"]
+[ext_resource type="Script" uid="uid://wms8glb40s0k" path="res://Data/Quest/QuestData.cs" id="1_t2wpb"]
+
+[resource]
+script = ExtResource("1_t2wpb")
+questId = "Enemy10"
+questName = "击杀10个敌人"
+questDescription = "去区域内击杀10个敌人"
+questItemReward = ExtResource("1_rbnww")
+questTargetValue = 1
+metadata/_custom_type_script = "uid://wms8glb40s0k"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ngi3w5lfdtgh"]
+
+[ext_resource type="Texture2D" uid="uid://cav6bn6nfxs0l" path="res://Texture/Items/Potion/WaterPot.png" id="1_gkpqn"]
+[ext_resource type="Script" uid="uid://7ktl0x5i8fun" path="res://Data/ItemData.cs" id="2_tebhe"]
+
+[resource]
+script = ExtResource("2_tebhe")
+itemIron = ExtResource("1_gkpqn")
+itemName = "小型魔力恢复药水"
+itemDescription = "恢复10点魔力"
+itemPrice = 100
+value = 10.0
+type = 1
+canDrop = true
+isConsumable = true
+itemId = "ManaPotion"
+metadata/_custom_type_script = "uid://7ktl0x5i8fun"

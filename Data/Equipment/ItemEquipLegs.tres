@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://1y3toar101yw"]
+
+[ext_resource type="Script" uid="uid://da4lcg2njv6xn" path="res://Data/EquipData.cs" id="1_1lrmu"]
+[ext_resource type="Texture2D" uid="uid://bsnxwd3mhmi24" path="res://Texture/Equipment/placeholder_legs.png" id="1_ehjyl"]
+
+[resource]
+script = ExtResource("1_1lrmu")
+equipType = 2
+itemIron = ExtResource("1_ehjyl")
+itemName = "铁裤腿"
+itemPrice = 500
+type = 3
+canDrop = true
+maxStack = 1
+itemId = "Equipment"
+metadata/_custom_type_script = "uid://da4lcg2njv6xn"

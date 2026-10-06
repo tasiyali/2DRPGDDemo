@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://d1fvrulbqr7bn"]
+
+[ext_resource type="Script" uid="uid://c0mfvfrdbg2fn" path="res://Sprites/UI/SkillPanel/SkillButton.cs" id="1_7p0j6"]
+[ext_resource type="Texture2D" uid="uid://bweydwh8hi2hw" path="res://Texture/Ui/Skill Icon/Meteo/Rain.png" id="1_gsj0b"]
+[ext_resource type="Texture2D" uid="uid://bop6wxt6vpr3k" path="res://Texture/Lock.png" id="2_vu68v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84rfk"]
+bg_color = Color(0.28627452, 0.30588236, 0.36862746, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kp68h"]
+bg_color = Color(0.1931203, 0.20784637, 0.25689307, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsj0b"]
+bg_color = Color(0.5231466, 0.54942816, 0.6316432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="SkillButton" type="Button" unique_id=643391972 node_paths=PackedStringArray("SkillIcon", "Lock")]
+texture_filter = 1
+custom_minimum_size = Vector2(50, 50)
+theme_override_styles/normal = SubResource("StyleBoxFlat_84rfk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kp68h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gsj0b")
+script = ExtResource("1_7p0j6")
+SkillIcon = NodePath("SkillIcon")
+Lock = NodePath("Lock")
+
+[node name="SkillIcon" type="TextureRect" parent="." unique_id=517169594]
+self_modulate = Color(0.3172787, 0.31727865, 0.31727865, 1)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_gsj0b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Lock" type="TextureRect" parent="." unique_id=120207507]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vu68v")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="." to="." method="OnPressed"]

@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://b8l3m02dqpojf"]
+
+[ext_resource type="Script" uid="uid://cjwkuivqv4phr" path="res://Sprites/UI/QuestPanel/QuestButton.cs" id="1_6mu3t"]
+[ext_resource type="Texture2D" uid="uid://bfkuve6332x8n" path="res://Texture/Equipment/placeholder_ring.png" id="2_7vplt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsk5b"]
+bg_color = Color(0.654902, 0.40784314, 0.2901961, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p30n"]
+bg_color = Color(0.3687505, 0.21370092, 0.1392828, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mu3t"]
+bg_color = Color(0.83649504, 0.57939875, 0.45927304, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsk5b"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_h8eqs"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_xspja"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_ae5bc"]
+font_size = 12
+
+[node name="QuestButton" type="Button" unique_id=363162654 node_paths=PackedStringArray("QuestName", "QuestDescription", "ItemIcon", "QuestProgress")]
+texture_filter = 1
+custom_minimum_size = Vector2(270, 90)
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wsk5b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3p30n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6mu3t")
+script = ExtResource("1_6mu3t")
+QuestName = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/QuestName")
+QuestDescription = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/QuestDescription")
+ItemIcon = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ItemIcon")
+QuestProgress = NodePath("MarginContainer/VBoxContainer/QuestProgress")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1591184266]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1438376695]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=257079193]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2054057187]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="QuestName" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1984897208]
+layout_mode = 2
+text = "任务"
+label_settings = SubResource("LabelSettings_wsk5b")
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2121972685]
+layout_mode = 2
+text = "任务描述"
+label_settings = SubResource("LabelSettings_h8eqs")
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1293077628]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2101898396]
+layout_mode = 2
+text = "奖励"
+label_settings = SubResource("LabelSettings_xspja")
+
+[node name="ItemIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=9536468]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture = ExtResource("2_7vplt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuestProgress" type="Label" parent="MarginContainer/VBoxContainer" unique_id=179836144]
+layout_mode = 2
+text = "0/10"
+label_settings = SubResource("LabelSettings_ae5bc")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="OnPressed"]

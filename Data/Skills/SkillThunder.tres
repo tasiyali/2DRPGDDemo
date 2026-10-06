@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://drx2qgsyv0wwo"]
+
+[ext_resource type="Texture2D" uid="uid://slwd0q3tfneh" path="res://Texture/Ui/Skill Icon/Spell/BookThunder.png" id="1_t2kd4"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_m1xxd"]
+[ext_resource type="PackedScene" uid="uid://df1kfp2pjs6sh" path="res://Scenes/Effects/skill_thunder.tscn" id="3_m1xxd"]
+
+[resource]
+script = ExtResource("2_m1xxd")
+manaCost = 3.2
+baseDamage = 3.0
+skillEffectScene = ExtResource("3_m1xxd")
+itemIron = ExtResource("1_t2kd4")
+itemName = "雷电"
+itemDescription = "召唤雷电攻击"
+itemPrice = 65
+type = 4
+itemId = "Thunder"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

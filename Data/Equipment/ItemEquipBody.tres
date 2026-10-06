@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://ck6sncrx81txb"]
+
+[ext_resource type="Script" uid="uid://da4lcg2njv6xn" path="res://Data/EquipData.cs" id="1_1nro2"]
+[ext_resource type="Texture2D" uid="uid://gxhpkqg1bdkx" path="res://Texture/Equipment/placeholder_body.png" id="1_o5th5"]
+
+[resource]
+script = ExtResource("1_1nro2")
+equipType = 1
+itemIron = ExtResource("1_o5th5")
+itemName = "铁胸甲"
+itemPrice = 500
+type = 3
+canDrop = true
+maxStack = 1
+itemId = "Equipment"
+metadata/_custom_type_script = "uid://da4lcg2njv6xn"

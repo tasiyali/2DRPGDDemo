@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c87y1y5jwwvrg"]
+
+[ext_resource type="PackedScene" uid="uid://la7533qclmos" path="res://Scenes/Npc/npc_simple.tscn" id="1_le6qv"]
+[ext_resource type="Texture2D" uid="uid://ilxtw5n0hafo" path="res://Texture/Actor/Characters/Monk/SeparateAnim/Idle.png" id="2_s8nys"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxgwx"]
+atlas = ExtResource("2_s8nys")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_utho4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxgwx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="NpcQuestMonk" unique_id=1061389209 instance=ExtResource("1_le6qv")]
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=639952754]
+sprite_frames = SubResource("SpriteFrames_utho4")
+animation = &"default"

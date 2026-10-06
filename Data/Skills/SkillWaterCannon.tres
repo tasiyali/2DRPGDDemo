@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dj17ebjprii38"]
+
+[ext_resource type="Texture2D" uid="uid://qih0hma7my5e" path="res://Texture/Ui/Skill Icon/Spell/WaterCanon.png" id="1_betif"]
+[ext_resource type="Script" uid="uid://k327ttmdb4xm" path="res://Data/SkillData.cs" id="2_s7knn"]
+[ext_resource type="PackedScene" uid="uid://lw55utjimsd1" path="res://Scenes/Effects/skill_water_canon.tscn" id="3_s7knn"]
+
+[resource]
+script = ExtResource("2_s7knn")
+manaCost = 3.0
+baseDamage = 2.5
+skillEffectScene = ExtResource("3_s7knn")
+itemIron = ExtResource("1_betif")
+itemName = "水炮"
+itemDescription = "水炮攻击"
+itemPrice = 65
+type = 4
+itemId = "WaterCannon"
+metadata/_custom_type_script = "uid://k327ttmdb4xm"

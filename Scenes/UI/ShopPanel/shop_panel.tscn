@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://bs3ndof3l56ua"]
+
+[ext_resource type="Script" uid="uid://6yg0lub6iay3" path="res://Sprites/UI/ShopPanel/ShopPanel.cs" id="1_iealn"]
+[ext_resource type="PackedScene" uid="uid://biv18xdcmigxl" path="res://Scenes/UI/ShopPanel/shop_button.tscn" id="2_18uak"]
+[ext_resource type="Resource" uid="uid://dcgtydbr2yy1j" path="res://Data/Potion/ItemHpSmall10.tres" id="2_amult"]
+[ext_resource type="Resource" uid="uid://ngi3w5lfdtgh" path="res://Data/Potion/ItemManaSmall10.tres" id="3_8iidi"]
+[ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://Texture/Items/Treasure/GoldCoin.png" id="3_earu6"]
+[ext_resource type="Resource" uid="uid://ck6sncrx81txb" path="res://Data/Equipment/ItemEquipBody.tres" id="4_xik73"]
+[ext_resource type="Resource" uid="uid://bnf23taoqv7qx" path="res://Data/Equipment/ItemEquipHelmet.tres" id="5_ivist"]
+[ext_resource type="Resource" uid="uid://1y3toar101yw" path="res://Data/Equipment/ItemEquipLegs.tres" id="6_tt6fa"]
+[ext_resource type="Resource" uid="uid://3l8dbdbaendk" path="res://Data/Equipment/ItemEquipRing.tres" id="7_q3vla"]
+[ext_resource type="Resource" uid="uid://b1njymg3y4x7w" path="res://Data/Equipment/ItemEquipWeapon.tres" id="8_ttwle"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iealn"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amult"]
+bg_color = Color(0.9999998, 0.35701737, 0.06309938, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38810843, 0.12798423, 0.015198343, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8iidi"]
+bg_color = Color(0.38444173, 0.109396406, 5.1018596e-06, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38810843, 0.12798423, 0.015198343, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xik73"]
+bg_color = Color(1, 0.607521, 0.47460306, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38810843, 0.12798423, 0.015198343, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ShopPanel" type="Control" unique_id=627138749 node_paths=PackedStringArray("container", "Totalcoin")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iealn")
+items = Array[Object]([ExtResource("2_amult"), ExtResource("3_8iidi"), ExtResource("4_xik73"), ExtResource("5_ivist"), ExtResource("6_tt6fa"), ExtResource("7_q3vla"), ExtResource("8_ttwle"), ExtResource("2_amult"), ExtResource("3_8iidi"), ExtResource("2_amult"), ExtResource("3_8iidi"), ExtResource("2_amult"), ExtResource("3_8iidi"), ExtResource("2_amult"), ExtResource("3_8iidi")])
+container = NodePath("Panel/MarginContainer/VBoxContainer/GridContainer")
+Totalcoin = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer/TotalCoin")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=915341033]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="Panel" type="Panel" parent="." unique_id=1741747654]
+custom_minimum_size = Vector2(436, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iealn")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=31976724]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1959130584]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=124298040]
+layout_mode = 2
+text = "商店"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=816341951]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1475251392]
+layout_mode = 2
+columns = 5
+
+[node name="ShopButton" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1736739805 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton2" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1302349183 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton3" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=298983374 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton4" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1871398553 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton5" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1932614083 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton6" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1789421364 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton7" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1403271542 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton8" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=632923804 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton9" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=533630751 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton10" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=756174583 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton11" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1604577375 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton12" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=893145824 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton13" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1570633079 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton14" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1182643487 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="ShopButton15" parent="Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=531236308 instance=ExtResource("2_18uak")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1284630822]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1834268729]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = ExtResource("3_earu6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TotalCoin" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1161764088]
+layout_mode = 2
+text = "10"
+
+[node name="CloseButton" type="Button" parent="." unique_id=2091569668]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 810.0
+offset_top = 149.0
+offset_right = 860.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_amult")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8iidi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xik73")
+text = "X"
+
+[connection signal="pressed" from="CloseButton" to="." method="OnPressed"]
